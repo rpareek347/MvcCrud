@@ -1,0 +1,51 @@
+﻿
+
+@model CrudOperation.Models.Employee
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<div class="form-horizontal">
+    <h4>Employee</h4>
+    <hr>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="EmployeeFirstName">First Name</label>
+        @*<input type="hidden" id="EmployeeId" name="EmployeeId" data-bind="value:ID">*@
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" id="EmployeeFirstName" name="EmployeeFirstName" type="text" value="" data-bind="value:FirstName">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2" for="EmployeeLastName">Last Name</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" id="EmployeeLastName" name="EmployeeLastName" type="text" value="" data-bind="value: LastName">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2" for="JoiningDate">Date of Joining</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" id="JoiningDate" name="JoiningDate" type="text" value="" data-bind="value: JoinDate">
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" data-bind="click: createEmployee" value="Create" class="btn btn-default">
+        </div>
+    </div>
+</div>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+@*<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/knockout-3.5.1.js"></script>
+<script src="~/Scripts/CreateEmployee.js"></script>*@
+
